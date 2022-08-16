@@ -31,7 +31,7 @@ With the example above, the command could look like: `$ ./produce topic1 topic1 
 
 
 #### With configuration file
-`$ ./produce <topic>`. You need to create a configuration file in the working directory called `.spray-and-pray.config` and its content needs to be:
+`$ ./produce <topic>` or `$ ./produce <topic> <directory>`. You need to create a configuration file in the working directory called `.spray-and-pray.config` and its content needs to be:
 
  ```json
 {
