@@ -1,10 +1,11 @@
 # SPRAY and PRAY
 A bash script for sending Kafka messages in bulk to Confluent Cloud CLI.
 
-## Prerequisites
+## Prerequisites (
 
  * [Confluent CLI](https://docs.confluent.io/confluent-cli/current/install.html)
  * jq with [Homebrew](https://formulae.brew.sh/formula/jq) or APT for Linux
+ * Login `$ confluent login`
 
 
 ## Produce to Confluent Cloud
