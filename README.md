@@ -1,4 +1,5 @@
-# Bulky
+# Bulky-Boy
+Bash script for sending Kafka messages in bulk to Confluent Cloud.
 
 ## Prerequisites
 
