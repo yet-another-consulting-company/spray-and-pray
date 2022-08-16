@@ -18,16 +18,16 @@ Save your message files in one directory per topic like the diagram shows below.
 ```bash
 .
 ├── spray-and-pray.sh
-├── topic1
-│   ├── msg1.json
-│   └── msg2.json
-└── topic2
-    ├── msg3.json
-    ├── msg4.json
-    └── msg5.json
+├── products
+│   ├── 131312.json
+│   └── 131313.json
+└── order
+    ├── e14k4.json
+    ├── e2fy8.json
+    └── r9e21.json
 ```
 
-With the example above, the command could look like: `$ ./produce topic1 topic1  env-t67q9 lkc-fr90tg` and then message 'msg1.json' and 'msg2.json' will be sent on topic 'topic1'.
+With the example above, the command could look like: `$ ./produce products products env-t67q9 lkc-fr90tg` and then message '131312.json' and '131313.json' will be sent on topic 'topic1'.
 
 
 #### With configuration file
