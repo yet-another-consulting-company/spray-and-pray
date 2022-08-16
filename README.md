@@ -13,7 +13,7 @@ If you create a configuration file, you don't need to send in cluster, environme
 
 ## Produce to Confluent Cloud
 
- * With configuration file `$ ./produce <topic>
+ * With configuration file `$ ./produce <topic>` 
  * Without configuration file: `$ ./produce <topic> <directory> <environment> <cluster>`.
 
 
