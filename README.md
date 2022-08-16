@@ -13,13 +13,10 @@ If you create a configuration file, you don't need to send in cluster, environme
 
 ## Produce to Confluent Cloud
 
-#### Without configuration file
-`$ ./produce <directory> <topic> <environment> <cluster>`.
-
-#### With configuration file
+ * With configuration file `$ ./produce <topic>
+ * Without configuration file: `$ ./produce <topic> <directory> <environment> <cluster>`.
 
 
-./.bulky-boy-config
 
 
 
