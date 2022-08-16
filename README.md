@@ -41,7 +41,9 @@ With the example above, the command could look like: `$ ./produce topic1 topic1 
 }
 ``` 
 
-Create a config file in the working directory: `$ touch .spray-and-pray.config && echo "{\r\n  \"environment\":\"<environment>\",\r\n  \"cluster\":\"<cluster>\",\r\n  \"directory\":\"<directory>\"\r\n}" > .spray-and-pray.config`
+Create a config file in the working directory: 
+
+`$ touch .spray-and-pray.config && echo "{\r\n  \"environment\":\"<environment>\",\r\n  \"cluster\":\"<cluster>\",\r\n  \"directory\":\"<directory>\"\r\n}" > .spray-and-pray.config`
 
 
 
