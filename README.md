@@ -13,7 +13,8 @@ If you create a configuration file, you don't need to send in cluster, environme
 
 ## Produce to Confluent Cloud
 
- * With configuration file `$ ./produce <topic>`. You need to create a configuration file in the working directory called `.bulky-boy.config` and its content needs to be:
+##### With configuration file
+`$ ./produce <topic>`. You need to create a configuration file in the working directory called `.bulky-boy.config` and its content needs to be:
 
  ```json
 {
@@ -22,7 +23,7 @@ If you create a configuration file, you don't need to send in cluster, environme
    "directory":"<directory>"
 }
 ``` 
- * Without configuration file: `$ ./produce <topic> <directory> <environment> <cluster>`.
+##### Without configuration file: `$ ./produce <topic> <directory> <environment> <cluster>`.
 
 
 
