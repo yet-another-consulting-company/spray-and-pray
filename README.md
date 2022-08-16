@@ -1,5 +1,5 @@
 # SPRAY and PRAY
-A bash script for sending Kafka messages in bulk with Confluent Cloud CLI.
+A bash script for sending Kafka messages in bulk with Confluent Cloud CLI. The script creates a new key/secret pair for each run and deletes it afterwards.
 
 ## Prerequisites 
 
