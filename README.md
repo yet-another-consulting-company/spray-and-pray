@@ -22,12 +22,12 @@ Save your message files in one directory per topic like the diagram shows below.
 │   ├── msg1.json
 │   └── msg2.json
 └── topic2
-    ├── msg1.json
     ├── msg3.json
-    └── msg4.json
+    ├── msg4.json
+    └── msg5.json
 ```
 
-With the example above, the command could look like: `$ ./produce topic1 topic1  env-t67q9 lkc-fr90tg`
+With the example above, the command could look like: `$ ./produce topic1 topic1  env-t67q9 lkc-fr90tg` and then message 'msg1.json' and 'msg2.json' will be sent on topic 'topic1'.
 
 
 #### With configuration file
