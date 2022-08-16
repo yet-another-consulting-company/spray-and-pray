@@ -7,7 +7,8 @@ Bash script for sending Kafka messages in bulk to Confluent Cloud.
  * jq with [Homebrew](https://formulae.brew.sh/formula/jq) or [Snap](https://snapcraft.io/jq)
  
 ## Optional Configuration file
-If you create a configuration file, you don't need to send in cluster, environment and directory every time you produce.
+If you create a configuration file, you don't need to send in cluster, environment and directory every time you produce:
+
 `$ touch .bulky-boy.config && echo "{\r\n   \"topic\":\"\",\r\n   \"environment\":\"\",\r\n   \"cluster\":\"\",\r\n   \"directory\":\"\"\r\n}" > .bulky-boy.config`
 
 ## Produce to Confluent Cloud
