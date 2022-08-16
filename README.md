@@ -10,6 +10,20 @@ A bash script for sending Kafka messages in bulk with Confluent Cloud CLI.
 
 ## Produce to Confluent Cloud
 
+Save your message files in one directory per topic like the diagram shows below:
+
+```bash
+.
+├── spray-and-pray.sh
+├── topic1
+│   ├── msg1.json
+│   └── msg2.json
+└── topic2
+    ├── msg1.json
+    ├── msg3.json
+    └── msg4.json
+```
+
 ##### With configuration file
 `$ ./produce <topic>`. You need to create a configuration file in the working directory called `.spray-and-pray.config` and its content needs to be:
 
