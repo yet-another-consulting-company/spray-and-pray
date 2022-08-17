@@ -7,14 +7,12 @@ printf "\n\n"
 topic=""
 environment=""
 cluster=""
-message_dir=""
 
 FILE=./.spray-and-pray.config
 if test -f "$FILE"; then
     echo "Found configuration file.."
     environment=`jq .environment $FILE | sed 's/\"//g'`
     cluster=`jq .cluster $FILE | sed 's/\"//g'`
-    message_dir=`jq .directory $FILE | sed 's/\"//g'`
 fi
 
 if ! [ -z "$1" ]
@@ -22,21 +20,18 @@ if ! [ -z "$1" ]
     topic=$1
 fi
 
-if ! [ -z "$2" ]
+
+if ! [ -z "$3" ]
   then
-  message_dir=$2
+  environment=$2
 fi
 
 if ! [ -z "$3" ]
   then
-  environment=$3
+  $cluster=$3
 fi
 
-if ! [ -z "$4" ]
-  then
-  topic=$4
-fi
-
+message_dir=$topic
 api_key_description="Local Kafka Produce Script, temporary key - can be removed"
 
 echo "Topic [$topic] Environment [$environment] Cluster [$cluster] Message Directory [$message_dir]"
@@ -63,9 +58,10 @@ echo "Created API key: " $api_key
 ## ## ## FIND ALL MESSAGES ## ## ##
 echo "Looking for messages in " $message_dir
 
-find . -type f -name "*.json" -print0 | while read -d $'\0' file
+find $message_dir -type f -name "*.json" -print0 | while read -d $'\0' file
 do
-	key=`echo "$file" | sed 's/\.// ' | sed 's/\///'`
+	#key=`echo "$file" | sed 's/\.// ' | sed 's/\///' | 's/^\.json//'`
+	key=`basename -s .json  $file`
 	value=`cat $file`
 	echo "Sending $key to $topic"
 	echo "$key:$value" | confluent kafka topic produce $topic --api-key $api_key --parse-key
