@@ -18,7 +18,7 @@ Save your message files in one directory per topic like the diagram shows below.
 ```bash
 .
 ├── spray-and-pray.sh
-├── products
+├── product
 │   ├── 131312.json
 │   └── 131313.json
 └── order
@@ -27,7 +27,7 @@ Save your message files in one directory per topic like the diagram shows below.
     └── r9e21.json
 ```
 
-With the example above, the command could look like: `$ ./produce products products env-t67q9 lkc-fr90tg` and then message '131312.json' and '131313.json' will be sent on topic 'topic1'. The keys for these messages will be '131312' and '131313' respectively.
+With the example above, the command could look like: `$ ./produce product product env-t67q9 lkc-fr90tg` and then message '131312.json' and '131313.json' will be sent on topic 'product'. The keys for these messages will be '131312' and '131313' respectively.
 
 
 #### With configuration file
