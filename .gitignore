@@ -12,8 +12,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
-.bulky-boy.config
-
+.spray-and-pray.config
 # AWS User-specific
 .idea/**/aws.xml
 
