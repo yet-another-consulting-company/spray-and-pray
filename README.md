@@ -42,7 +42,7 @@ With the example above, the command could look like: `$ ./produce product env-t6
 
 Create a config file in the working directory: 
 
-`$ touch .spray-and-pray.config && echo "{\r\n  \"environment\":\"<environment>\",\r\n  \"cluster\":\"<cluster>\",\r\n  \"directory\":\"<directory>\"\r\n}" > .spray-and-pray.config`
+`$ touch .spray-and-pray.config && echo "{\n  \"environment\":\"<environment>\",\n  \"cluster\":\"<cluster>\",\n  \"directory\":\"<directory>\"\n}" > .spray-and-pray.config`
 
 
 
