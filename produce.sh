@@ -62,7 +62,9 @@ find $message_dir -type f -name "*.json" -print0 | while read -d $'\0' file
 do
 	#key=`echo "$file" | sed 's/\.// ' | sed 's/\///' | 's/^\.json//'`
 	key=`basename -s .json  $file`
-	value=`cat $file`
+	tmp_value=`cat $file`
+	value=echo "|${tmp_value//[$'\t\r\n ']}|"
+	echo "Removed line breaks: $value"
 	echo "Sending $key to $topic"
 	echo "$key:$value" | confluent kafka topic produce $topic --api-key $api_key --parse-key
 done	
